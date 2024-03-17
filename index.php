@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Tophatguard.com - login<title>
+        <title>Tophatguard.com - login</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
@@ -16,7 +16,7 @@
             <input type="password" name="password" placeholder="Enter your password here..."></br>
 
             <button type="submit">Login</button>
-            <p>or continue as a<a href="homeguest.html">guest</a></p>
+            <p>or continue as a <a href="homeguest.html">guest</a></p>
         </form>
     </body>
 </html>
