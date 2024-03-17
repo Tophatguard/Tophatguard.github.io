@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Tophatguard.com - login<title>
+        <title>Tophatguard.com - login</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
