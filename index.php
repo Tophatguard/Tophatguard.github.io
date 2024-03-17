@@ -15,6 +15,9 @@
             <label>Password</label>
             <input type="password" name="password" placeholder="Enter your password here..."></br>
 
+            <p>to create an account e-mail NOTAOVUD@gmail.com your username and (optional) password.</p>
+            <p>once e-mailed me I will email you back your password if you didn't tell me one and username and if I succesfully made your account.</p>
+
             <button type="submit">Login</button>
             <p>or continue as a <a href="homeguest.html">guest</a></p>
         </form>
