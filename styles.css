@@ -50,13 +50,19 @@ div.blog {
 }
 
 a:link {
+    text-decoration: none;
     color: azure;
 }
 
 a:visited {
-    color:azure;
+    color: azure;
 }
 
 a:hover {
-    color:crimson;
+    color: crimson;
+}
+
+a:active {
+    color: crimson;
+    text-decoration: underline;
 }
