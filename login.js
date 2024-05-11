@@ -7,7 +7,7 @@ function checkFileContent() {
         var contents = event.target.result;
 
         document.getElementById("username").innerText = contents
-        window.userName = contents;
+        window.userName = contents.toString();
         if (contents == "Tophatguard") {
             alert("nope");
             contents = "nope.";
