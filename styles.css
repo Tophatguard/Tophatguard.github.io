@@ -1,10 +1,50 @@
-.intro {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    position: fixed;
-    left: 50;
+div.titleBar {
+    font-family: 'Courier New', Courier, monospace;
+    position: sticky;
+    background-color: black;
+    color:silver !important;
+    font-size: x-large;
+    width: 100%;
+    height: 50%;
+    top: 0px;
+    left: 0px;
+    text-decoration: none !important;
+    outline: none !important;
 }
 
-img {
-    width: 100%;
-    height: auto;
+div.blog {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.button {
+    -webkit-appearance: none;
+    background: #757474;
+    border: 2px solid #404040;
+    border-radius: 4px;
+    outline: none;
+    padding: 0.5em 0.8em;
+    cursor: pointer;
+}
+
+.file-upload__input {
+    -webkit-appearance: none;
+    background: #757474;
+    border: 2px solid #404040;
+    border-radius: 4px;
+    outline: none;
+    padding: 0.5em 0.8em;
+    cursor: pointer;
+}
+
+.button:active {
+    -webkit-appearance: none;
+    background: #404040;
+    border: 2px solid #757474;
+    border-radius: 4px;
+    outline: none;
+    padding: 0.5em 0.8em;
+    cursor: pointer;
 }

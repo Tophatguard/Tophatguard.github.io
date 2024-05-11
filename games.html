@@ -3,42 +3,22 @@
     <head>
         <title>Tophatguard.com</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="styles.css">
+        <link rel="stylesheet" href="styles.css">
         <link rel="icon" type="image/x-icon" href="images/icon.png">
         <link href="app.js">
-        <style>
-            div.titleBar {
-                font-family: 'Courier New', Courier, monospace;
-                position: sticky;
-                background-color: black;
-                color:silver !important;
-                font-size: x-large;
-                width: 100%;
-                height: 50%;
-                top: 0px;
-                left: 0px;
-                text-decoration: none !important;
-                outline: none !important;
-            }
-            div.blog{
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                position: relative;
-                text-align: center;
-                font-size: xx-large;
-            }
-        </style>
     </head>
     <body background="images/bg.png">
         <div class="titleBar">
             <a href="index.html"> <i>Tophatguard.com</i> </a>
             <a href="games.html"> <i><b>games</b></i> </a>
             <a href="tools.html"> <i>tools</i> </a>
+            <a href="login.html"> <i>login</i> </a>
+            <i id="username"></i>
         </div>
         <div class="blog">
-            <h1 class="mainText" style="position: sticky; top: 0px; left: 100px;">Welcome to Tophatguard.com</h1>
-            <p>if you are looking for my youtube, <a href="https://www.youtube.com/channel/UCY0Vrkt4kb_kVIpfJOIQ3GA">click here</a></p>
-            <p>I am currently working on <b>game developing</b></p>
+            <h1 class="mainText" style="position: sticky; top: 0px; left: 100px;">My games</h1>
         </div>
+        <script>document.getElementById("username").innerText = window.userName</script>
     </body>
 
 </html>

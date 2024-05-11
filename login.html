@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Tophatguard.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/icon.png">
+</head>
+<body background="images/bg.png">
+    <div class="titleBar">
+        <a href="index.html"><i>Tophatguard.com</i></a>
+        <a href="games.html"><i>games</i></a>
+        <a href="tools.html"><i>tools</i></a>
+        <a href="login.html"><i><b>login</b></i></a>
+        <i id="username"></i>
+    </div>
+    <div class="blog">
+        <p class="mainText">To login, click the create-login file button.</p>
+        <p>next, edit the file to be your username(<u>inside the file</u>)</p>
+        <a href="assets/newUser.lgn" download><button class="button">create-login</button></a>
+        <input type="file" id="fileInput" class="button">
+        <button onclick="checkFileContent()" class="button">Login</button>
+        <pre id="fileContents"></pre>
+        <p id="syntaxResult"></p>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
