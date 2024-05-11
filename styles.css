@@ -19,6 +19,16 @@ div.blog {
     font-size: xx-large;
 }
 
+button {
+    -webkit-appearance: none;
+    background: #757474;
+    border: 2px solid #404040;
+    border-radius: 4px;
+    outline: none;
+    padding: 0.5em 0.8em;
+    cursor: pointer;
+}
+
 .button {
     -webkit-appearance: none;
     background: #757474;
@@ -65,4 +75,17 @@ a:hover {
 a:active {
     color: crimson;
     text-decoration: underline;
+}
+
+.JSicon:active {
+    color: #404040;
+}
+
+div.playArea {
+    border-color: #757474;
+    border-radius: 10px;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
 }
