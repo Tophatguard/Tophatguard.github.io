@@ -78,7 +78,7 @@ a:active {
 }
 
 .JSicon:active {
-    color: #404040;
+    background-image: none;
 }
 
 div.playArea {
