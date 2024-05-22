@@ -28,7 +28,7 @@ IF %eula%==yes start "" "https://www.minecraft.net/en-us/eula"
 IF %eula%==Yes start "" "https://www.minecraft.net/en-us/eula"
 cd \
 cd SFMC\source
-echo %servername%. >> "servers.SFMCdat"
+echo %servername% >> "servers.SFMCdat"
 cd \
 cd C:\SFMC\myservers\%servername%
 echo to agree to the eula and start the server set eula=false to eula=true
