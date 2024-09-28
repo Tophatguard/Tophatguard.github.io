@@ -1,0 +1,7 @@
+{
+    "pack": {
+        "pack_format": 32,
+        "supported_formats": [16, 32],
+        "description": "Pvp Pack by Tophatguard"
+    }
+}
