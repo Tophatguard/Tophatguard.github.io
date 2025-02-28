@@ -5,6 +5,34 @@ div.titleBar {
     padding: 10px;
 }
 
+div.Level {
+    text-align: left;
+    background-color: #8f8f8f;
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    left: 40%;
+    padding: 10px;
+    margin: 10px;
+    position: absolute;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+div.contributers {
+    text-align: left;
+    background-color: #8f8f8f;
+    display: flex;
+    float: right;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 div.titleBar a.main {
     text-align: center;
     color: white;
