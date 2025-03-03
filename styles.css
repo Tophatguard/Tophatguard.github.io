@@ -7,22 +7,46 @@ div.titleBar {
 
 div.Level {
     text-align: left;
-    background-color: #8f8f8f;
+    background-color: #121212;
+    border-radius: 10px;
+    border: 2px dashed #222;
     display: flex;
     float: left;
     justify-content: center;
     align-items: center;
+    color: white;
     left: 40%;
     padding: 10px;
     margin: 10px;
     position: absolute;
     text-decoration: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+}
+
+div.Level:hover {
+    text-align: left;
+    background-color: #121212;
+    border-radius: 10px;
+    border: 2px dashed #222;
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    left: 40%;
+    padding: 10px;
+    margin: 10px;
+    position: absolute;
+    text-decoration: none;
+    font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
 }
 
 div.contributers {
     text-align: left;
-    background-color: #8f8f8f;
+    background-color: #121212;
+    border-radius: 10px;
+    border: 2px dashed #222;
+    color: white;
     display: flex;
     float: right;
     justify-content: center;
@@ -128,6 +152,19 @@ button {
     cursor: pointer;
 }
 
+div.topdemon {
+    background-color: #121212;
+    outline: 2px solid #222;
+    color: white;
+    padding: 10px;
+}
+
+div.topdemon a:hover {
+    background-color: #121212;
+    outline: 2px solid #222;
+    color: red;
+}
+
 button:active {
     -webkit-appearance: none;
     background: #404040;
@@ -183,8 +220,10 @@ div.Header {
 div.footer {
     font-family: Arial, Helvetica, sans-serif;
     position: static;
-    background-color: black;
-    color:silver !important;
+    background-color: #121212;
+    border-radius: 10px;
+    border: 2px dashed #222;
+    color: white;
     font-size: small;
     width: 100%;
     height: 100%;
