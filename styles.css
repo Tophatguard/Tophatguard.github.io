@@ -1,8 +1,10 @@
 div.titleBar {
     text-align: center;
-    background: black;
+    background: rgb(32, 32, 32);
     color: white;
     padding: 10px;
+    border: #3b3b3b 2px;
+    border-style: dashed;
 }
 
 div.Level {
