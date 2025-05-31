@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="BaseStyles.css">
+    <title>Base Engine</title>
+</head>
+<body>
+    <div class="menu">
+        <button class="File">File</button>
+        <div class="FileMenu" id="FileMenu">
+            <button onclick="newProject()">New Project</button>
+            <button onclick="openProject()">Open Project</button>
+            <button id="save" style="color: gray;">Save Project</button>
+        </div>
+        <button class="Edit">Edit</button>
+        <div class="EditMenu">
+            <button>Undo (ctrl + z)</button>
+            <button>Redo (ctrl + shift + z)</button>
+        </div>
+        <p style="right: 5px; top: 4px; position: absolute">Beta</p>
+    </div>
+    <div class="sideMenu" id="side menu" style="visibility: hidden;">
+        <label for="objImport">import</label>
+        <input type="file" id="objImport" accept=".json" onchange="importObject(this.value)">
+        <button onclick="newObject()">+</button>
+        <div class="objects" id="objects"></div>
+    </div>
+    <div class="canvas" id="canvas">
+
+    </div>
+    <div class="inspector" id="inspector" style="visibility: hidden;">
+        <p style="top: 50%; position: inherit;" id="text">Select a object to inspect it</h1>
+    </div>
+    <script>
+        var i = 1;
+        newProject()
+        function downloadJson(jsonString, filename) {
+            const blob = new Blob([jsonString], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement("a");
+            link.download = filename;
+            link.href = url;
+            link.click();
+        }
+        function newProject() {
+            document.getElementById("side menu").style.visibility = 'visible'
+            document.getElementById("inspector").style.visibility = 'visible'
+            document.getElementById("save").style.color = 'white'
+        }
+        function importObject(filename) {
+            fetch(filename)
+                .then(data => {
+                    console.log(data)
+                })
+        }
+        function newObject() {
+            const object = document.createElement('div')
+            const canvasObj = document.createElement('div')
+            const text = document.createElement('p')
+            canvasObj.style.width = '50px';
+            canvasObj.style.height = '25px';
+            canvasObj.id = 'Can' + i
+            canvasObj.style.backgroundColor = 'rgb(26, 26, 26)';
+            canvasObj.style.position = 'absolute'
+            object.id = 'Obj' + i
+            text.style.backgroundColor = canvasObj.style.backgroundColor;
+            i += 1
+            let prevcolor = canvasObj.style.backgroundColor
+            object.addEventListener('mouseover', function(event) {
+                prevcolor = canvasObj.style.backgroundColor
+                canvasObj.style.backgroundColor = 'rgb(73, 73, 73)';
+                text.style.backgroundColor = 'rgb(73, 73, 73)'; 
+            })
+            object.addEventListener('mouseout', function(event) {
+                canvasObj.style.backgroundColor = prevcolor
+                text.style.backgroundColor = prevcolor
+            })
+            object.addEventListener('click', function(event) {
+                const inspector = document.getElementById("inspector")
+                inspector.innerHTML = ''
+                const textLabel = document.createElement('p')
+                const textInput = document.createElement('input')
+                const name = document.createElement('p')
+                const nameInput = document.createElement('input')
+                const update = document.createElement('button')
+                const xLabel = document.createElement('p')
+                const xInput = document.createElement('input')
+                const yLabel = document.createElement('p')
+                const yInput = document.createElement('input')
+                const layer = document.createElement('p')
+                const layerInput = document.createElement('input')
+                const width = document.createElement('p')
+                const widthInput = document.createElement('input')
+                const height = document.createElement('p')
+                const heightInput = document.createElement('input')
+                const bgcolor = document.createElement('p')
+                const bgcolorInput = document.createElement('input')
+                const saveButton = document.createElement('button')
+                bgcolorInput.type = 'color'
+                update.textContent = 'update'
+                saveButton.textContent = 'save'
+                saveButton.addEventListener('click', function(event) {
+                    const content = {
+                        text: textInput.value,
+                        width: widthInput.value,
+                        height: heightInput.value,
+                        x: xInput.value,
+                        y: yInput.value,
+                        layer: layerInput.value,
+                        backgroundColor: bgcolorInput.value
+                    }
+                    downloadJson(JSON.stringify(content, null, 2), nameInput.value + '.json')
+                })
+                update.addEventListener('click', function(event) {
+                    object.textContent = nameInput.value
+                    canvasObj.style.top = yInput.value + 'px'
+                    canvasObj.style.left = xInput.value + 'px'
+                    canvasObj.style.width = widthInput.value + 'px'
+                    canvasObj.style.height = heightInput.value + 'px'
+                    text.textContent = textInput.value
+                    canvasObj.style.backgroundColor = bgcolorInput.value
+                    text.style.backgroundColor = canvasObj.style.backgroundColor
+                })
+                document.getElementById("inspector").append(update)
+                inspector.append(saveButton)
+                name.textContent = 'name:'
+                textLabel.textContent = 'text:'
+                xLabel.textContent = 'X:'
+                yLabel.textContent = 'Y:'
+                width.textContent = 'width:'
+                height.textContent = 'height:'
+                layer.textContent = 'Layer:'
+                bgcolor.textContent = 'background color:'
+                textInput.placeholder = 'click to add text...'
+                textInput.textContent = text.textContent
+                nameInput.value = object.textContent
+                xInput.value = canvasObj.style.left
+                yInput.value = canvasObj.style.top
+                widthInput.value = canvasObj.style.width
+                heightInput.value = canvasObj.style.height
+                bgcolorInput.value = canvasObj.style.backgroundColor
+                layerInput.value = canvasObj.style.zIndex
+                inspector.append(document.createElement('br'))
+                inspector.append(xLabel)
+                inspector.append(xInput)
+                inspector.append(document.createElement('br'))
+                inspector.append(yLabel)
+                inspector.append(yInput)
+                inspector.append(document.createElement('br'))
+                inspector.append(width)
+                inspector.append(widthInput)
+                inspector.append(height)
+                inspector.append(heightInput)
+                inspector.append(name)
+                inspector.append(nameInput)
+                inspector.append(textLabel)
+                inspector.append(textInput)
+                inspector.append(bgcolor)
+                inspector.append(bgcolorInput)
+                inspector.append(document.createElement('br'))
+                inspector.append(layer)
+                inspector.append(layerInput)
+            });
+            object.textContent = 'gameObj'
+            document.getElementById('canvas').append(canvasObj)
+            document.getElementById('objects').append(object)
+            canvasObj.append(text)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+body {
+    background-color: rgb(31, 31, 31);
+    margin: 0px;
+}
+
+.menu {
+    background-color: rgb(58, 58, 58);
+    text-align: left;
+    color: white;
+    margin: 0px;
+    display: block;
+    border-bottom: rgb(85, 85, 85) solid 1px;
+}
+
+p {
+    margin: 0px;
+    margin-left: 5px;
+    padding-left: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+
+.inspector {
+    position: absolute;
+    margin: 0;
+    right: 0%;
+    width: 17%;
+    height: 100%;
+    display: block;
+    background-color: rgb(58, 58, 58);
+    border-left: rgb(85, 85, 85) solid 1px;
+}
+
+input {
+    margin: 0px;
+    margin-left: 5px;
+    padding-left: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+
+div.menu button {
+    margin: 0px;
+    margin-left: 5px;
+    padding-left: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+
+button {
+    margin: 0px;
+    margin-left: 5px;
+    padding-left: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+
+button:hover {
+    margin: 0px;
+    margin-left: 5px;
+    padding-left: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    background-color: rgb(73, 73, 73);
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+div.menu button:hover {
+    margin: 0px;
+    margin-left: 5px;
+    padding-left: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    background-color: rgb(73, 73, 73);
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.FileMenu {
+    display: none;
+    position: absolute;
+    background-color: rgb(58, 58, 58);
+    max-width: 130px;
+    border-bottom: rgb(85, 85, 85) solid 1px;
+    border-right: rgb(85, 85, 85) solid 1px;
+    z-index: 1;
+}
+
+.EditMenu {
+    display: none;
+    position: absolute;
+    left: 53px;
+    background-color: rgb(58, 58, 58);
+    max-width: 250px;
+    border-bottom: rgb(85, 85, 85) solid 1px;
+    border-right: rgb(85, 85, 85) solid 1px;
+    border-left: rgb(85, 85, 85) solid 1px;
+    z-index: 1;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+label {
+    position: absolute;
+    left: 10%;
+    top: 1%;
+    margin: 0px;
+    margin-left: 5px;
+    padding-left: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    background-color: rgb(43, 43, 43);
+    color: white;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+
+label:hover {
+    margin: 0px;
+    margin-left: 5px;
+    padding-left: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    background-color: rgb(73, 73, 73);
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.sideMenu button {
+    position: absolute;
+    left: 80%;
+    top: 1%;
+    margin: 0px;
+    margin-left: 5px;
+    padding-left: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    background-color: rgb(43, 43, 43);
+    color: white;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+
+.canvas {
+    position: absolute;
+    margin: 0;
+    left: 17%;
+    width: 66%;
+    height: 70%;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    border-left: rgb(85, 85, 85) solid 1px;
+    overflow: hidden;
+}
+
+.canvas div {
+    left: 0px;
+    top: 0px;
+}
+
+.objects div {
+    margin: 5px;
+    padding: 2px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    border: none;
+}
+
+.objects div:hover {
+    margin: 5px;
+    padding: 2px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    background-color: rgb(73, 73, 73);
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+}
+
+.sideMenu button:hover {
+    margin: 0px;
+    margin-left: 5px;
+    padding-left: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    background-color: rgb(73, 73, 73);
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+.File:focus + .FileMenu {
+    display: block;
+}
+
+.FileMenu:hover {
+    display: block;
+}
+
+.Edit:focus + .EditMenu {
+    display: block;
+}
+
+.EditMenu:hover {
+    display: block;
+}
+
+div.sideMenu {
+    position: absolute;
+    margin: 0;
+    width: 17%;
+    height: 100%;
+    display: block;
+    background-color: rgb(58, 58, 58);
+    border-right: rgb(85, 85, 85) solid 1px;
+    z-index: 0;
+}
+
+div.objects {
+    position: absolute;
+    overflow: scroll;
+    top: 5%;
+    left: 10%;
+    width: 250px;
+    height: 300px;
+    display: block;
+    background-color: rgb(26, 26, 26);
+    border: rgb(85, 85, 85) solid 1px;
+}
+
+body {
+    overflow: hidden;
+}
