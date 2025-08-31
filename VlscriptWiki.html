@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Tophatguard.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="wikiStyle.css">
+        <link rel="icon" type="image/x-icon" href="images/icon.png">
+        <link href="app.js">
+    </head>
+    <body>
+        <div class="titleBar">
+            <a href="index.html"> <i>Tophatguard.com</i> </a>
+            <a href="games.html"> <i>games</i> </a>
+            <a href="tools.html"> <i>tools</i> </a>
+            <a href="login.html"> <i>login</i> </a>
+        </div>
+        <div class="blog">
+            <h1>VLScript Wiki</h1>
+            <p>VLScipt as said in the <a href="https://github.com/Tophatguard/Vlscript">github page's description</a> "A script compiler and runner for valleyos". That is very true. It is a script compiler and runner and no it will not bake a <a href="https://en.wikipedia.org/wiki/Cake">cake</a> for you. Unless you download the <a href="github.com/Tophatguard/Vlscript/blob/main/rnbc.cpp">source code</a> and program it to bake a <a href="https://en.wikipedia.org/wiki/Cake">cake</a> for you. Anyway time for the documentation.</p>
+            <p>For the first token I will cover, It is the <p class="copyPaste">shush</p></p>
+            <p>token (that was a copy-paste section, not a button by the way) which is the equivelent to echo off in <a href="https://en.wikipedia.org/wiki/Batch_file">batch</a>. So you need to put that in the beginning of every script unless you like that wierd command repeating stuff. Because RNBC compiles to batch with .rnb instead of .bat so many logical features from <a href="https://en.wikipedia.org/wiki/Batch_file">batch</a> are also in VLScript.</p>
+            <p>Next I will cover if statements. If statements are weird than when you accidentally delete your OS and the USB you're booting from when you're trying to install a new OS. Pinnacle of programming. But if it ain't broken, don't fix it. So basically if statements are the same as in batch, but variables, and variables anywhere do not need %'s wrapped around them. If statements take a variable, the thing to do with them, AKA ==, =>, !=, etc, and another variable.</p>
+            <p>Next is</p>
+            <p class="copyPaste">print</p>
+            <p>and</p>
+            <p class="copyPaste">cprint</p>
+            <p>print, prints out the argument given. (prints to the terminal not printing out a sheet of paper) and cprint prints out the second argument, with the first argument being the color. If you want to know every color supported, in your local windows terminal emulator type in <p class="copyPaste">help color</p></p>
+            <p>and that will tell you all the colors.</p>
+            <p>next up is variables. You declare a variable using <p class="copyPaste">var</p></p>
+            <p>and the argument is the variables name</p>
+            <p>Next we have <p class="copyPaste">newln</p></p>
+            <p>newln will print a new line because print does not. cprint does print a new line after printing what you told it to so in that case it's not required</p>
+            <p>The next token is <p class="copyPaste">setbg</p></p>
+            <p>setbg will set the background color to what the arguments is, also it uses the same colors as cprint so <p class="copyPaste">help color</p></p>
+            <p>will tell you what colors you have, also it will tell you the order of text color and background color because setbg can also set the text color.</p>
+            <p>Next thing that is important for if you want to use cprint is that you have to include libraries! Currently the library(s) are hardcoded, but I fully implement including and creating libraries in the future. Anyway, enough about my rant. <p class="copyPaste">include</p></p>
+            <p>will include the library specified. You need to include graphics and enable colors to be able to use cprint.</p>
+            <p>Next to enable stuff, <p class="copyPaste">enable</p></p>
+            <p>enable will enable include certain functions from libraries because of positioning. For example, enable colors is also need alongside include graphics to use cprint. Also all enable calls must be at the bottom of the file, or out of the way from other functions, because what it compiles there is not meant to be ran without arguments, and you cannot put arguments unless the function is called, so an error will happen and most likely you will be softlocked and have to ctrl-c the program to exit.</p>
+            <p>Next we got<p class="copyPaste">func</p></p>
+            <p>this will create a function. It will name the function what you passed as the argument.</p>
+            <p>Next, <p class="copyPaste">()</p></p>
+            <p>yes, I know it's weird. I had no other ideas on what to name it, so it is two brackets. It will jump to the name of the function passed in as the first argument. It does not matter where the function is, it will jump to it no matter what.</p>
+            <p>And finally, <p class="copyPaste">return(0)</p></p>
+            <p>and <p class="copyPaste">return(1)</p></p>
+            <p>return(0) exits without an error.</p>
+            <p>and return(1) exits with and error.</p>
+            <p>I'm finally done writing this. <h1>Yippe</h1></p>
+            <p>By the way Tophatguard made this. I also made VLScript so duh I'm going to make a documentation.</p>
+        </div>
+  </body>
+
+</html>
