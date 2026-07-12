@@ -1,10 +1,25 @@
 div.titleBar {
     text-align: center;
-    background: rgb(32, 32, 32);
+    background-color: #565857;
     color: white;
-    padding: 10px;
-    border: #3b3b3b 2px;
-    border-style: dashed;
+    border-color: #9C416C;
+    border-style: solid;
+    padding-bottom: 10px;
+    border-width: 2px;
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+}
+
+div.actualBlog {
+    font-size: medium;
+}
+
+* {
+    font-family: "Maple Mono";
 }
 
 div.Level {
@@ -64,7 +79,6 @@ div.titleBar a.main {
     color: white;
     display: block;
     float: left;
-    padding: 3px;
     text-decoration: none;
     background-color: #404040;
 }
@@ -82,18 +96,46 @@ div.titleBar a.main:hover {
 }
 
 div.titleBar a {
-    text-align: center;
-    color: white;
-    display: block;
-    float: right;
-    padding: 3px;
-    text-decoration: none;
-    background-color: gray;
+    text-align: right;
+    background: #383838;
+    border: 1px solid #A11FC4;
+    border-radius: 14px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    outline: none;
+    padding: 0.31em 0.8em;
+    cursor: pointer;
+    color: #BCBDC0;
+    font-size: medium;
+    animation-name: fadeOut;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.5s;
 }
 
 div.titleBar a:hover {
-    background-color: lightgray;
-    color: black;
+    background: #404040;
+    border: 1px solid #A11FC4;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    outline: none;
+    padding: 0.31em 0.8em;
+    cursor: pointer;
+    color: #9ea4b6;
+    font-size: medium;
+    animation-name: fade;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.5s;
 }
 
 body {
@@ -107,36 +149,87 @@ div.title {
 }
 
 div.blog {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
-    font-size: xx-large;
-    background-color: #8f8f8f;
+    text-align: left;
+    font-size: larger;
+    background-color: #2f2f2f;
     padding: 50px;
+    color: #BCBDC0;
 }
 
 button {
-    -webkit-appearance: none;
-    background: #757474;
-    border: 2px solid #404040;
-    border-radius: 4px;
+    background: #383838;
+    border: 1px solid #A11FC4;
+    border-radius: 14px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
     outline: none;
     padding: 0.5em 0.8em;
     cursor: pointer;
+    color: #BCBDC0;
+    font-size: medium;
+    animation-name: fadeOut;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
 }
 
-.button {
-    -webkit-appearance: none;
-    background: #757474;
-    border: 2px solid #404040;
-    border-radius: 4px;
+button:hover {
+    animation-name: fade;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    background: #404040;
+    border: 1px solid #A11FC4;
+    border-radius: 14px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
     outline: none;
     padding: 0.5em 0.8em;
     cursor: pointer;
+    color: #9ea4b6;
+    font-size: medium;
+}
+
+@keyframes fade {
+    0% {
+        background: #383838;
+        border-top-width: 0px;
+        border-left-width: 0px;
+        border-right-width: 0px;
+        color: #BCBDC0;
+    }
+    100% {
+        background: #404040;
+        border: 1px solid #A11FC4;
+        border-top-width: 0px;
+        border-left-width: 0px;
+        border-right-width: 0px;
+        color: #9ea4b6;
+
+    }
+}
+@keyframes fadeOut {
+    100% {
+        background: #383838;
+        border: 1px solid #A11FC4;
+        border-top-width: 0px;
+        border-left-width: 0px;
+        border-right-width: 0px;
+        color: #BCBDC0;
+    }
+    0% {
+        background: #404040;
+        border: 1px solid #A11FC4;
+        border-top-width: 0px;
+        border-left-width: 0px;
+        border-right-width: 0px;
+        color: #9ea4b6;
+    }
 }
 
 .file-upload__input {
     -webkit-appearance: none;
-    background: #757474;
+    background: #666666;
     border: 2px solid #404040;
     border-radius: 4px;
     outline: none;
@@ -205,7 +298,7 @@ div.playArea {
 }
 
 h1 {
-    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
 }
 
 img.logo {
@@ -220,8 +313,9 @@ div.Header {
 }
 
 div.footer {
-    font-family: Arial, Helvetica, sans-serif;
     position: static;
+    bottom: 0;
+    width: 100%;
     background-color: #121212;
     border-radius: 10px;
     border: 2px dashed #222;
